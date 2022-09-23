@@ -4,10 +4,10 @@ node {
         checkout scm
      }
      stage('Build image'){
-        app = docker.build("jenkins/apache")
+        app = docker.build("jenkins/httpd")
      }
      stage ('Test'){
-        withDockerContainer("jenkins/nginx"){ 
+        withDockerContainer("jenkins/httpd"){ 
             sh "echo 'Bonjour'" 
             }
             }
