@@ -19,11 +19,11 @@ pipeline{
                          sh 'echo $DOCKERHUB_CREDENTIALS_PSW  | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                     }
                  }
-//            stage('push') {
-//                 steps {
-//                      sh 'docker push bastiencoudray/ipssi-apache-js:latest'
-//                    }
-//                  }
+            stage('push') {
+                 steps {
+                      sh 'docker push bastiencoudray/ipssi-apache-js:latest'
+                    }
+                  }
                 }
             post {
                 always {
