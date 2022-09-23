@@ -11,7 +11,7 @@ pipeline{
                  }
               stage('build') {
                       steps {
-                         sh 'docker build -t  bastiencoudray/ipssi-apache-js:latest . '
+                         sh 'docker build -t  bastiencoudray/jenkins:latest . '
                     }
                  }
              stage('login') {
@@ -21,7 +21,7 @@ pipeline{
                  }
             stage('push') {
                  steps {
-                      sh 'docker push bastiencoudray/ipssi-apache-js:latest'
+                      sh 'docker push bastiencoudray/jenkins:latest'
                     }
                   }
                 }
